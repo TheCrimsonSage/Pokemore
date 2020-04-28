@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PokemonListItem" rowHeight="88" id="KGk-i7-Jjw" customClass="PokemonListTableViewCell" customModule="Pokemore" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="618" height="88"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="618" height="88"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="D4C-NB-DZg">
+                        <rect key="frame" x="10" y="5" width="598" height="44"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pokeball" translatesAutoresizingMaskIntoConstraints="NO" id="4OL-DX-sAz">
+                                <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="4OL-DX-sAz" secondAttribute="height" multiplier="1:1" id="L9o-qD-hOH"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dNp-4c-oZP">
+                                <rect key="frame" x="54" y="11.5" width="544" height="21.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="dNp-4c-oZP" firstAttribute="leading" secondItem="4OL-DX-sAz" secondAttribute="trailing" constant="10" id="6oE-gc-3uq"/>
+                            <constraint firstItem="dNp-4c-oZP" firstAttribute="centerY" secondItem="D4C-NB-DZg" secondAttribute="centerY" id="SCD-mp-wzl"/>
+                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="44" id="bEg-S5-Ndg"/>
+                        </constraints>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="D4C-NB-DZg" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="199-4V-f5J"/>
+                    <constraint firstAttribute="bottom" secondItem="D4C-NB-DZg" secondAttribute="bottom" constant="5" id="1e6-la-IAl"/>
+                    <constraint firstItem="D4C-NB-DZg" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="ZOa-3I-Qze"/>
+                    <constraint firstAttribute="trailing" secondItem="D4C-NB-DZg" secondAttribute="trailing" constant="10" id="jo3-ue-9RN"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="nameLabel" destination="dNp-4c-oZP" id="csk-4z-NpW"/>
+                <outlet property="pokemonImageView" destination="4OL-DX-sAz" id="kOp-lb-PWe"/>
+            </connections>
+            <point key="canvasLocation" x="132" y="213"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="pokeball" width="50" height="50"/>
+    </resources>
+</document>
