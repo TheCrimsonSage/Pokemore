@@ -35,6 +35,32 @@ class PokeApiPokemonState {
         }
     }
     
+    func persistCache() {
+        try? pokemonListState.persistCache(withName: Constants.cacheFileNames.PokemonList)
+        try? pokemonState.persistCache(withName: Constants.cacheFileNames.Pokemon)
+        try? pokemonSprites.persistCache(withName: Constants.cacheFileNames.PokemonSprites)
+    }
+    
+    func getPokemonById(at name: String) -> Pokemon? {
+        return pokemonState[name]
+    }
+    
+    func getPokemonSpriteById(at name: String) -> Data? {
+        return pokemonSprites[name]
+    }
+    
+    func getCurrentListState() -> [NamedApiResponse] {
+        guard let result = self.pokemonListState[0] else {
+            updateListState(tillIndex: Constants.PokemonList.listSize)
+            return [NamedApiResponse]()
+        }
+        return result
+    }
+}
+
+//MARK: Prefetch
+
+extension PokeApiPokemonState {
     func prefetchPokemonFromList(at index: Int) {
         guard let list = self.pokemonListState[index] else{
             return
@@ -87,28 +113,4 @@ class PokeApiPokemonState {
             }
         }
     }
-    
-    func persistCache() {
-        try? pokemonListState.persistCache(withName: Constants.cacheFileNames.PokemonList)
-        try? pokemonState.persistCache(withName: Constants.cacheFileNames.Pokemon)
-        try? pokemonSprites.persistCache(withName: Constants.cacheFileNames.PokemonSprites)
-    }
-    
-    func getPokemonById(at name: String) -> Pokemon? {
-        return pokemonState[name]
-    }
-    
-    func getPokemonSpriteById(at name: String) -> Data? {
-        return pokemonSprites[name]
-    }
-    
-    func getCurrentListState() -> [NamedApiResponse] {
-        guard let result = self.pokemonListState[0] else {
-            updateListState(tillIndex: Constants.PokemonList.listSize)
-            return [NamedApiResponse]()
-        }
-        return result
-    }
 }
-
-

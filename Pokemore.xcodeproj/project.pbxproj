@@ -177,7 +177,6 @@
 				383371F42448B3250034C762 /* PokeApi.swift */,
 				383371F624499D990034C762 /* Http.swift */,
 				38337204244B52AD0034C762 /* PokeApiPokemonState.swift */,
-				384AE87C2455D4F500CD88B9 /* Move.swift */,
 			);
 			path = PokeApi;
 			sourceTree = "<group>";
@@ -185,6 +184,7 @@
 		383371F8244B15790034C762 /* ResponseModels */ = {
 			isa = PBXGroup;
 			children = (
+				384AE87C2455D4F500CD88B9 /* Move.swift */,
 				383371F9244B159C0034C762 /* Berry.swift */,
 				383371FB244B17B20034C762 /* Pokemon.swift */,
 				383371FD244B17FC0034C762 /* NamedApiResponse.swift */,
