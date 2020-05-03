@@ -14,7 +14,7 @@ class MainMenuViewController: UIViewController {
     @IBOutlet weak var menuTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        pokemonState.updateListState(tillIndex: 100)
+        pokemonState.updateListState(tillIndex: Constants.PokemonList.listSize)
         menuTableView.register(UINib(nibName: Constants.TableViewCell.MainMenuCellXib, bundle: nil), forCellReuseIdentifier: Constants.TableViewCell.MainMenuCellIdentifier)
         menuTableView.dataSource = self
         menuTableView.delegate = self
@@ -54,12 +54,6 @@ extension MainMenuViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let mainMenuItem = Constants.mainMenuItems[indexPath.row]
         performSegue(withIdentifier: mainMenuItem.segueIdentifier, sender: nil)
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let editViewController = segue.destination as? PokemonListViewController {
-            editViewController.pokemonState = pokemonState
-        }
     }
 }
 

@@ -10,7 +10,7 @@ import UIKit
 
 class PokemonListViewController: UIViewController {
 
-    var pokemonState: PokeApiPokemonState!
+    @Injected var pokemonState: PokeApiPokemonState
     var pokemonList: [NamedApiResponse] = [NamedApiResponse]()
     let pokemonViewSegueIdentifier: String = "pokemonView"
 
@@ -30,7 +30,6 @@ class PokemonListViewController: UIViewController {
         self.navigationController?.setNavigationBarHidden(false, animated: true)
         pokemonListTableView?.reloadData()
     }
-
 }
 
 
@@ -66,7 +65,6 @@ extension PokemonListViewController: UITableViewDelegate {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let editViewController = segue.destination as? PokemonViewController {
-            editViewController.pokemonState = pokemonState
             editViewController.pokemonId = sender as? String
         }
     }

@@ -22,6 +22,10 @@ struct Constants{
         static let PokemonSprites = "pokemonSprites"
     }
     
+    struct PokemonList {
+        static let listSize = 200
+    }
+    
     static let mainMenuItems = [
         MainMenuItem(name: "Pokémon", description: "All the different Pokémon", imageIdentifier: "pokeball", segueIdentifier: "pokemonList"),
         MainMenuItem(name: "Berries", description: "Berries are small fruits that can provide bonuses", imageIdentifier: "berries", segueIdentifier: "berryList"),

@@ -19,7 +19,7 @@ class PokemonViewController: UIViewController {
     @IBOutlet weak var statsTableViewHeightConstraint: NSLayoutConstraint!
     
     @IBOutlet weak var movesTableViewHeightConstraint: NSLayoutConstraint!
-    var pokemonState: PokeApiPokemonState!
+    @Injected var pokemonState: PokeApiPokemonState
     var pokemonId: String? // Optional to prevent race condition where delegate callback is called before Id is assigned
     var pokemon: Pokemon?
     let basicDataSource = BasicInformationTableViewDataSource<PokemonBasicInformationTableViewCell>()

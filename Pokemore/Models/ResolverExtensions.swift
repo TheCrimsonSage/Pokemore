@@ -11,6 +11,9 @@ import Resolver
 
 extension Resolver: ResolverRegistering {
     public static func registerAllServices() {
-        register { PokeApiPokemonState() }
+        register { PokeApiPokemonState() }.scope(shared)
+        register { Cache.loadCache(withName: Constants.cacheFileNames.Pokemon) ?? Cache<String,Pokemon>() }.scope(shared)
+        register { Cache.loadCache(withName: Constants.cacheFileNames.PokemonSprites) ?? Cache<String,Data>() }.scope(shared)
+        register { Cache.loadCache(withName: Constants.cacheFileNames.PokemonList) ?? Cache<Int,[NamedApiResponse]>() }.scope(shared)
     }
 }
