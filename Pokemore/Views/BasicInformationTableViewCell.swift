@@ -8,6 +8,5 @@
 
 import UIKit
 protocol BasicInformationTableViewCell  {
-    var propertyLabel: UILabel! {get set}
-    var valueLabel: UILabel! {get set}
+    func configure(property: String?, value: String?)
 }

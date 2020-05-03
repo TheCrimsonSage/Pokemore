@@ -14,6 +14,7 @@ struct Constants{
         static let MainMenuCellIdentifier = "MainMenuItem"
         static let PokemonListCellXib = "PokemonListTableViewCell"
         static let PokemonListCellIdentifier = "PokemonListItem"
+        static let TableViewSectionHeaderXib = "TableViewSectionHeader"
     }
     
     struct cacheFileNames {

@@ -24,4 +24,9 @@ class PokemonAbilityTableViewCell: UITableViewCell, BasicInformationTableViewCel
         // Configure the view for the selected state
     }
     
+    func configure(property: String?, value: String?)
+    {
+        propertyLabel.text = property
+        valueLabel.text = value
+    }
 }

@@ -9,6 +9,7 @@
 import UIKit
 
 class PokemonBasicInformationTableViewCell: UITableViewCell, BasicInformationTableViewCell {
+    
 
     @IBOutlet weak var propertyLabel: UILabel!
     @IBOutlet weak var valueLabel: UILabel!
@@ -22,4 +23,8 @@ class PokemonBasicInformationTableViewCell: UITableViewCell, BasicInformationTab
         // Configure the view for the selected state
     }
     
+    func configure(property: String?, value: String?) {
+        propertyLabel.text = property
+        valueLabel.text = value
+    }
 }

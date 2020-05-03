@@ -43,6 +43,7 @@
 		38F82618245721260020E9B6 /* Injected.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F82617245721260020E9B6 /* Injected.swift */; };
 		38F8261D245722570020E9B6 /* Resolver in Frameworks */ = {isa = PBXBuildFile; productRef = 38F8261C245722570020E9B6 /* Resolver */; };
 		38F82621245725120020E9B6 /* ResolverExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F82620245725120020E9B6 /* ResolverExtensions.swift */; };
+		38F9F8F8245EE99B00C25221 /* BasicInformationCellDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F9F8F7245EE99B00C25221 /* BasicInformationCellDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -83,6 +84,7 @@
 		389B685A2450169300EBDBE4 /* PokemonBasicInformationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PokemonBasicInformationTableViewCell.xib; sourceTree = "<group>"; };
 		38F82617245721260020E9B6 /* Injected.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injected.swift; sourceTree = "<group>"; };
 		38F82620245725120020E9B6 /* ResolverExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResolverExtensions.swift; sourceTree = "<group>"; };
+		38F9F8F7245EE99B00C25221 /* BasicInformationCellDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicInformationCellDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +168,7 @@
 				3875E9EE245704F000D4124A /* Cache.swift */,
 				38F82617245721260020E9B6 /* Injected.swift */,
 				38F82620245725120020E9B6 /* ResolverExtensions.swift */,
+				38F9F8F7245EE99B00C25221 /* BasicInformationCellDataSource.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -295,6 +298,7 @@
 				384AE8812455EE5200CD88B9 /* PokemonStats.swift in Sources */,
 				38337202244B50420034C762 /* PokemonListTableViewCell.swift in Sources */,
 				38337207244B59510034C762 /* PokemonListResponse.swift in Sources */,
+				38F9F8F8245EE99B00C25221 /* BasicInformationCellDataSource.swift in Sources */,
 				383371E7244847840034C762 /* MainMenuItemTableViewCell.swift in Sources */,
 				383371EC24486F800034C762 /* MainMenuItem.swift in Sources */,
 				383371D0244846000034C762 /* SceneDelegate.swift in Sources */,
